@@ -17,9 +17,15 @@
   <!-- The title tag we show the title of our site and the title of the current page -->
   <title><?= $site->title() ?> | <?= $page->title() ?></title>
 
+  <style>
+    figure { width: 100%; }
+    img[data-sizes="auto"] { display: block; width: 100%; }
+  </style>
+
   <!-- Stylesheets can be included using the `css()` helper. Kirby also provides the `js()` helper to include script file. 
         More Kirby helpers: https://getkirby.com/docs/reference/templates/helpers -->
   <?= css(['assets/css/index.css', '@auto']) ?>
+  <?= js(['assets/js/lazysizes.min.js', '@auto']) ?>
 
 </head>
 <body>
