@@ -3,9 +3,13 @@
 # Sections can have different layouts and display additional information or a preview image
 # More about pages sections: https://getkirby.com/docs/reference/panel/sections/pages
 type: pages
-headline: Notes
+label: Notes
 parent: kirby.page("notes")
-info: "{{ page.date.toDate('d.m.Y') }}"
+info: "{{ page.published }}"
 template: note
 empty: No notes yet
 sortBy: date desc
+image:
+  query: page.cover
+  cover: true
+  ratio: 3/2
